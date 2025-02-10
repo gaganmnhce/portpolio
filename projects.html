@@ -12,42 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <style>
-       body {
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        .light-mode {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        #projects {
-            padding: 40px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .dark-mode #projects {
-            background-color: #333;
-        }
-
-        #projects h2 {
-            font-size: 3rem;
-            margin-bottom: 40px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .dark-mode #projects h2 {
-            color: #e0e0e0; 
-        }
-
         .projects-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -57,7 +21,7 @@
         }
 
         .project-card {
-            background-color: #fff;
+            background-color: #9db899;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 350px;
@@ -87,6 +51,7 @@
 
         .project-card p {
             font-size: 1.2rem;
+            height: 120px;
             color: #555;
             text-align: justify;
         }
@@ -130,22 +95,25 @@
                 <li><a href="./hobbies.html" class="menu-btn">Hobbies</a></li>
                 <li><a href="#skills" class="menu-btn">Projects</a></li>
                 <li><a href="./contact.html" class="menu-btn">Contact</a></li>
-                <li><a href="#" class="menu-btn"> 
-                    <button id="toggleButton" class="toggle-button">🌚 Dark Mode</button></a></li>
-            </ul>
+                
+                <button id="theme-switch">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                  </button>
+
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <br><br><br><br>
+    <br><br> 
 
-  <section id="projects">
-    <div class="max-width"  id="dark-modep">
+  <section >
+    <div   >
 
-    <h2>My Projects</h2>
-    <div class="projects-container">
+    <h2 style="display: flex; justify-content: center;" >My Projects</h2>
+    <br><div class="projects-container">
         <div class="project-card">
             <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/404012366/MQ/HF/YU/133083788/smart-pill-timer-reminder-medicine-dispenser-with-alarm.jpg" alt="Medicine Dispenser">
             <h3>Medicine Dispenser</h3>
@@ -154,7 +122,7 @@
         </div>
         <div class="project-card">
             <img src="https://electionbuddy.com/wp-content/uploads/2022/01/Voting-image-6-scaled.jpg" alt="Decentralized Voting System">
-            <h3>Decentralized Voting System</h3>
+            <h3>  Voting System </h3>
             <p>A blockchain-based decentralized voting system that ensures secure and transparent elections. It eliminates fraud and tampering, providing a tamper-proof record of votes.</p>
             <a href="https://github.com/gaganmnhce/Decentralized-voting-system-using-blockchain" target="_blank">View Project</a>
         </div>
