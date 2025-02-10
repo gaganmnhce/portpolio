@@ -76,21 +76,22 @@ navLinks.forEach(link => {
     });
 });
 
-        const toggleButton = document.getElementById("toggleButton");
-        const body = document.body;
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('theme-switch')
 
-        if (localStorage.getItem("mode") === "dark") {
-            body.classList.add("dark-mode");
-            toggleButton.textContent = "🔦 Light Mode";
-        }
-    
-        toggleButton.addEventListener("click", () => {
-            body.classList.toggle("dark-mode");
-            if (body.classList.contains("dark-mode")) {
-                toggleButton.textContent = "🔦 Light Mode";
-                localStorage.setItem("mode", "dark");
-            } else {
-                toggleButton.textContent = "🌚 Dark Mode";
-                localStorage.setItem("mode", "light");
-            }
-        }); 
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode')
+  localStorage.setItem('darkmode', 'active')
+}
+
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode')
+  localStorage.setItem('darkmode', null)
+}
+
+if(darkmode === "active") enableDarkmode()
+
+themeSwitch.addEventListener("click", () => {
+  darkmode = localStorage.getItem('darkmode')
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
